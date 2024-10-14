@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using QFeedMill.Models.Dto.Feed;
-using QFeedMill.Models.IServices;
+using QFeedMill.Services;
 
 namespace QFeedMill.Controllers
 {

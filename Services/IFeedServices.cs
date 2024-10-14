@@ -1,7 +1,7 @@
 ﻿using QFeedMill.Models.Dto;
 using QFeedMill.Models.Dto.Feed;
 
-namespace QFeedMill.Models.IServices
+namespace QFeedMill.Services
 {
     public interface IFeedServices
     {

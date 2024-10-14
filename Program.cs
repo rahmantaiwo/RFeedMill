@@ -1,7 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using QFeedMill.Models.Entities;
-using QFeedMill.Models.IRepository;
-using QFeedMill.Models.IServices;
 using QFeedMill.Repository;
 using QFeedMill.Services;
 
@@ -16,9 +14,11 @@ builder.Services.AddSqlServer<ApplicationDbContext>(dbConnection);
 
 //Repository
 builder.Services.AddScoped<IFeedRepository, FeedRepository>();
+builder.Services.AddScoped<IFeedCategoryRepository, FeedCategoryRepository>();
 
 //Service
 builder.Services.AddScoped<IFeedServices, FeedServices>();
+builder.Services.AddScoped<IFeedCategoryServices, FeedCategoryServices>();
 
 var app = builder.Build();
 

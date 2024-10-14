@@ -2,8 +2,7 @@
 using QFeedMill.Models.Dto;
 using QFeedMill.Models.Dto.Feed;
 using QFeedMill.Models.Entities;
-using QFeedMill.Models.IRepository;
-using QFeedMill.Models.IServices;
+using QFeedMill.Repository;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace QFeedMill.Services

@@ -1,12 +1,12 @@
 ﻿using QFeedMill.Models.Entities;
 using QFeedMill.Models.Enum;
 
-namespace QFeedMill.Models.IRepository
+namespace QFeedMill.Repository
 {
     public interface IFeedRepository
     {
-        Task<Feed> GetFeedAsync(Guid id);
         Task<List<Feed>> GetAllFeedAsync();
+        Task<Feed?> GetFeedAsync(Guid id);
         Task<Feed?> GetFeedByPhaseAsync(FeedPhases phase);
     }
 }
