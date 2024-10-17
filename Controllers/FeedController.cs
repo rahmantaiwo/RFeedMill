@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using QFeedMill.Models.Dto.Feed;
 using QFeedMill.Services;
 
@@ -8,9 +9,12 @@ namespace QFeedMill.Controllers
 	public class FeedController : Controller
 	{
 		private readonly IFeedServices _feedServices;
-        public FeedController(IFeedServices feedServices)
+        private readonly IFeedCategoryServices _feedCategoryServices;
+
+        public FeedController(IFeedServices feedServices, IFeedCategoryServices feedCategoryServices)
         {
 			_feedServices = feedServices;
+            _feedCategoryServices = feedCategoryServices;
         }
 
 		[HttpGet("all-feeds")]
@@ -30,7 +34,12 @@ namespace QFeedMill.Controllers
 		[HttpGet("create-feed")]
 		public async Task<IActionResult> CreateFeed()
 		{
-			return View();
+
+			var feedCategoies  = await _feedCategoryServices.GetAllFeedCategories();
+
+            ViewData["selectFeedCategories"] = new SelectList(feedCategoies.Data, "Id", "Name");
+
+            return View();
 		}
 
 		[HttpPost("create-feed")]
