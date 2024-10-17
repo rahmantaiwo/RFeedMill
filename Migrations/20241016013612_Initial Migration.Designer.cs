@@ -12,8 +12,8 @@ using QFeedMill.Models.Entities;
 namespace QFeedMill.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241008005843_Added FeedCategory to Migration")]
-    partial class AddedFeedCategorytoMigration
+    [Migration("20241016013612_Initial Migration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

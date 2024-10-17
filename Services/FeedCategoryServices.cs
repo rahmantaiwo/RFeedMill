@@ -1,12 +1,11 @@
-﻿using QFeedMill.Models.Category;
-using QFeedMill.Models.Dto;
-using QFeedMill.Models.Dto.Feed;
+﻿using QFeedMill.Models.Dto;
 using QFeedMill.Models.Dto.FeedCategory;
+using QFeedMill.Models.Entities;
 using QFeedMill.Repository;
 
 namespace QFeedMill.Services
 {
-    public class FeedCategoryServices : IFeedCategoryServices
+	public class FeedCategoryServices : IFeedCategoryServices
     {
         private readonly IFeedCategoryRepository _feedCategoryRepository;
         private readonly ApplicationDbContext _dbContext;
@@ -65,10 +64,10 @@ namespace QFeedMill.Services
         }
 
         public async Task<BaseResponse<List<FeedCategoryDto>>> GetAllFeedCategories()
-        {
+        { 
             try
             {
-                var feedCategory = await _feedCategoryRepository.GetFeddCategoriesAsync();
+                var feedCategory = await _feedCategoryRepository.GetFeedCategoriesAsync();
                 if (feedCategory == null || feedCategory.Count == 0)
                 {
 
@@ -146,7 +145,7 @@ namespace QFeedMill.Services
                 }
 
                 feedCategory.Name = request.Name;
-                feedCategory.UpdateDate = DateTime.Now;
+                feedCategory.UpdatedDate = DateTime.Now;
 
 
                 _dbContext.FeedCategories.Update(feedCategory);

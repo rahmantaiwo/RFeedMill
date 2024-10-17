@@ -1,10 +1,10 @@
-﻿using QFeedMill.Models.Category;
+﻿using QFeedMill.Models.Entities;
 
 namespace QFeedMill.Repository
 {
-    public interface IFeedCategoryRepository
+	public interface IFeedCategoryRepository
     {
-        Task<List<FeedCategory>> GetFeddCategoriesAsync();
+        Task<List<FeedCategory>> GetFeedCategoriesAsync();
         Task<FeedCategory?> GetFeedCategoryAsync(Guid id);
         Task<FeedCategory?> GetFeedCategoryByNameAsync(string name);
     }

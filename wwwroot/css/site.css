@@ -21,15 +21,3 @@ body {
   margin-bottom: 60px;
 }
 /*Image section*/
-.banner {
-    background-image: url(/Feeds/Feedmill2.png);
-    height: 115vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: -40px;
-    text-align: center;
-    width
-    padding-bottom: 20%;
-    color: white;
-    font-weight: bold;
-}

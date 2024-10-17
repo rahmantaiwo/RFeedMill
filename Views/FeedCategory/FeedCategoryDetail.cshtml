@@ -1,0 +1,22 @@
+﻿@using QFeedMill.Models.Dto.FeedCategory
+
+@model FeedCategoryDto;
+
+@{
+    ViewData["Title"] = "FeedCategoryDetail";
+}
+
+<div class="col-md-6">
+    <div class="card">
+        <div class="card-header">
+            @Model.Name
+        </div>
+        <div class="card-body">
+            <p class="card-text">Name:  @Model.Name</p>
+        
+
+            <a asp-controller="FeedCategory" asp-action="UpdateFeedCategory"
+               asp-route-id="@Model.Id" class="btn btn-primary">Edit</a> 
+        </div>
+    </div>
+</div>

@@ -7,14 +7,13 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using QFeedMill.Models.Entities;
 
-
 #nullable disable
 
 namespace QFeedMill.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241004004751_Initial Migration")]
-    partial class InitialMigration
+    [Migration("20241017002808_changes")]
+    partial class changes
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,11 +31,11 @@ namespace QFeedMill.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("BirdCategoryId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<Guid>("FeedCategoryId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<float>("Kilogram")
                         .HasColumnType("real");
@@ -55,35 +54,41 @@ namespace QFeedMill.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BirdCategoryId");
+                    b.HasIndex("FeedCategoryId");
 
                     b.ToTable("Feeds");
                 });
 
-            modelBuilder.Entity("QFeedMill.Models.Enum.FeedCategory", b =>
+            modelBuilder.Entity("QFeedMill.Models.Entities.FeedCategory", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("Id");
 
-                    b.ToTable("FeedCategory");
+                    b.ToTable("FeedCategories");
                 });
 
             modelBuilder.Entity("QFeedMill.Models.Entities.Feed", b =>
                 {
-                    b.HasOne("QFeedMill.Models.Enum.FeedCategory", "BirdCategory")
+                    b.HasOne("QFeedMill.Models.Entities.FeedCategory", "FeedCategory")
                         .WithMany()
-                        .HasForeignKey("BirdCategoryId")
+                        .HasForeignKey("FeedCategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("BirdCategory");
+                    b.Navigation("FeedCategory");
                 });
 #pragma warning restore 612, 618
         }

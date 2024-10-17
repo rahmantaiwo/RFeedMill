@@ -8,9 +8,9 @@ namespace QFeedMill.Models.Dto.Feed
 	{
 		public Guid Id { get; set; }
 		public FeedPhases Phase { get; set; }
-		public Guid FeedCategoryId { get; set; }
 		public float Kilogram { get; set; }
 		public int Quantity { get; set; }
 		public decimal Price { get; set; }
+		public Guid FeedCategoryId { get; set; }
 	}
 }

@@ -34,7 +34,7 @@ namespace QFeedMill.Controllers
 		}
 
 		[HttpPost("create-feed")]
-		public async Task<IActionResult> CreateFeedAsync([FromForm] CreateFeedDto request)
+		public async Task<IActionResult> CreateFeed([FromForm] CreateFeedDto request)
 		{
 			var result = await _feedServices.CreateFeed(request);
 			if (result.IsSuccessful)

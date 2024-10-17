@@ -1,0 +1,55 @@
+﻿@using QFeedMill.Models.Dto.FeedCategory;
+@model IEnumerable<FeedCategoryDto>;
+
+@{
+	ViewData["Title"] = "FeedCategories";
+	var i = 0;
+}
+<a href="@Url.Action("CreateFeedCategory","FeedCategory")" class="btn btn-secondary">Create New Feed</a>
+<br />
+
+<div class="col-md-10">
+	<table class="table table-responsive">
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Name</th>
+				<th scope="col">Action</th>
+				
+			</tr>
+		
+
+		<tbody>
+
+			@if (Model.Count() > 0)
+			{
+				@foreach (var item in Model)
+				{
+					i++;
+					<tr>
+						<th scope="row">@i</th>
+						<td>@item.Name</td>
+					   
+						<td>
+							<a asp-controller="FeedCategory" asp-action="FeedCategoryDetail"
+							   asp-route-id="@item.Id" class="btn btn-secondary">Feed Detail</a>
+						</td>
+						<td>
+							<a asp-controller="FeedCategory" asp-action="DeleteFeed"
+							   asp-route-id="@item.Id" class="btn btn-secondary">Delete</a>
+						</td>
+					</tr>
+				}
+
+			}
+			else
+			{
+				<tr>
+					No Record Found
+				</tr>
+			}
+
+		</tbody>
+		</thead>
+	</table>
+</div>

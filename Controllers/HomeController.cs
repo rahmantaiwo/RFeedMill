@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using QFeedMill.Models;
+using QFeedMill.Models.Entities;
 using System.Diagnostics;
 
 namespace QFeedMill.Controllers
@@ -7,10 +8,12 @@ namespace QFeedMill.Controllers
 	public class HomeController : Controller
 	{
 		private readonly ILogger<HomeController> _logger;
+		
 
 		public HomeController(ILogger<HomeController> logger)
 		{
 			_logger = logger;
+			
 		}
 
 		public IActionResult Index()

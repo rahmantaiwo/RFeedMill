@@ -1,15 +1,53 @@
-﻿ @{
-        ViewData["Title"] = "Home Page";
-    }
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
 
-    <div class="text-center">
-        <h5 class="display-4">Q.Tech FeeddMill </h5>
-    <p>
-           Welcome to the Feedmill Q.Tech App! Your all-in-one solution for managing and optimizing feed production.
-           Whether you're tracking inventory, streamlining production processes, or monitoring feed quality,
-           we've got you covered. Let's make feed management efficient and hassle-free!
-      </p>
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q.Tech FeedMill</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @* animated css  *@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" 
+    integrity="sha512-doJrC /ocU8VGVRx3O9981+2aYUn3fuWVWvqLi1U+tA2MWVzsw+NVKq1PrEN F03M+TYBP92PnYUlXFH1ZW0FpLw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+ 
+    @* banner section *@
+    <div class="container-fluid mb-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="4000">
+                            <img src="/Feeds/Poultry Feedmill.jpg" class="d-block w-100" height="680vh" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="mb-4">Poultry Sotrage Room</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="/Feeds/Aquaticfeedmill.jpg" class="d-block w-100" height="680vh" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Aquatic Storage Room</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="/Feeds/feedmil4.jpg" class="d-block w-100" height="680vh" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Feed Pellete Machine</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+</body>
+</html>
 
   

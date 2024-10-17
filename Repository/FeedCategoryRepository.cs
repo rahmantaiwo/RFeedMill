@@ -1,17 +1,17 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
-using QFeedMill.Models.Category;
+using QFeedMill.Models.Entities;
 
 namespace QFeedMill.Repository
 {
-    public class FeedCategoryRepository : IFeedCategoryRepository
+	public class FeedCategoryRepository : IFeedCategoryRepository
     {
         private readonly ApplicationDbContext _dbContext;
         public FeedCategoryRepository(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
         }
-        public async Task<List<FeedCategory>> GetFeddCategoriesAsync()
+        public async Task<List<FeedCategory>> GetFeedCategoriesAsync()
         {
             return await _dbContext.FeedCategories.ToListAsync();
         }

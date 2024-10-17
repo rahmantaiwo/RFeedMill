@@ -7,18 +7,27 @@
 
 <div class="row">
 	<div class="col-md-8 mx-auto rounded border p-3">
-		<h2 class="text-center">New Feed</h2>
+		<h2 class="text-center">Update Feed</h2>
 
 		<form asp-controller="Feed" method="post" enctype="multipart/form-data" asp-action="CreateFeed">
 
 			<div class="mb-3">
 				<label class="form-label">Phase</label>
-				<input type="text" class="form-control" name="Phase" placeholder="Phase" required>
+				<select class="form-control" name="Phase">
+					<option value="text">Starter</option>
+					<option value="text">Grower</option>
+					<option value="text">Finisher</option>
+				</select>
 			</div>
-			<div class="mb-3">
+			<div>
 				<label class="form-label">FeedCategoryId</label>
-				<input type="text" class="form-control" name="FeedCategoryId" required>
-			</div>
+				@* <select>
+					<option value="Layer">text</option>
+					<option value="Cockerel">text</option>
+					<option value="Broiler">text</option>
+					<option value="Noiler">text</option>
+				</select>
+			</div> *@
 			<div class="mb-3">
 				<label class="form-label">Kilogram</label>
 				<input type="text" class="form-control" name="Kilogram" placeholder="Kg" required>
@@ -35,7 +44,7 @@
 			</div>
 
 			<div class="row">
-				<button type="submit" class="btn btn-success">Success</button>
+				<button type="submit" class="btn border btn-success">Success</button>
 			</div>
 
 		</form>

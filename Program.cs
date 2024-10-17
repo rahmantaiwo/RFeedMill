@@ -12,13 +12,15 @@ var dbConnection = builder.Configuration.GetConnectionString("DefaultConnection"
 
 builder.Services.AddSqlServer<ApplicationDbContext>(dbConnection);
 
+//Service
+
+
+builder.Services.AddScoped<IFeedCategoryServices, FeedCategoryServices>();
+builder.Services.AddScoped<IFeedCategoryRepository, FeedCategoryRepository>();
+builder.Services.AddScoped<IFeedServices, FeedServices>();
 //Repository
 builder.Services.AddScoped<IFeedRepository, FeedRepository>();
-builder.Services.AddScoped<IFeedCategoryRepository, FeedCategoryRepository>();
 
-//Service
-builder.Services.AddScoped<IFeedServices, FeedServices>();
-builder.Services.AddScoped<IFeedCategoryServices, FeedCategoryServices>();
 
 var app = builder.Build();
 
