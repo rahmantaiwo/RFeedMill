@@ -1,48 +1,47 @@
 ﻿@{
-	ViewData["Title"] = "Create Feed";
+    ViewData["Title"] = "Create Feed";
 }
 <div class="row">
-	<div class="col-md-8 mx-auto rounded border p-3">
-		<h2 class="text-center">New Feed</h2>
+    <div class="col-md-8 mx-auto rounded border p-3">
+        <h2 class="text-center">New Feed</h2>
 
-		<form asp-controller="Feed" method="post" enctype="multipart/form-data" asp-action="CreateFeed">
+        <form asp-controller="Feed" method="post" enctype="multipart/form-data" asp-action="CreateFeed">
 
-			<div class="mb-3">
-				<label class="form-label">Phase</label>
-				<select class="form-control" name="Phase">
-					<option value="text">Starter</option>
-					<option value="text">Grower</option>
-					<option value="text">Finisher</option>
-				</select>
-			</div>
-			<div>
-				<label class="form-label">FeedCategoryId</label>
-				<select class="form-control" name="FeedCategory">
-					<option value="text">Layer</option>
-					<option value="text">Cockerel</option>
-					<option value="text">Broiler</option>
-					<option value="text">Noiler</option>
-				</select>
-			</div>
-			<div class="mb-3">
-				<label class="form-label">Kilogram</label>
-				<input type="text" class="form-control" name="Kilogram" placeholder="Kg" required>
-			</div>
+            <div class="mb-3">
+                <label class="form-label">Phase</label>
+                <select class="form-control" name="Phase">
+                    <option value="text">Starter</option>
+                    <option value="text">Grower</option>
+                    <option value="text">Finisher</option>
+                </select>
+            </div>
+            <div>
+                <label class="form-label">FeedCategoryId</label>
 
-			<div class="mb-3">
-				<label class="form-label">Quantity</label>
-				<input type="text" class="form-control" name="Quantity" placeholder="Quantity" required>
-			</div>
 
-			<div class="mb-3">
-				<label class="form-label">Price</label>
-				<input type="number" class="form-control" name="Price" placeholder="Price" required>
-			</div>
+                <select name="FeedCategory" class="form-select" asp-items="@(ViewData["selectFeedCategories"] as IEnumerable<SelectListItem>)" required>
+                    <option value="">Select Feed Category</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Kilogram</label>
+                <input type="text" class="form-control" name="Kilogram" placeholder="Kg" required>
+            </div>
 
-			<div class="row">
-				<button type="submit" class="btn btn-success">Success</button>
-			</div>
+            <div class="mb-3">
+                <label class="form-label">Quantity</label>
+                <input type="text" class="form-control" name="Quantity" placeholder="Quantity" required>
+            </div>
 
-		</form>
-	</div>
+            <div class="mb-3">
+                <label class="form-label">Price</label>
+                <input type="number" class="form-control" name="Price" placeholder="Price" required>
+            </div>
+
+            <div class="row">
+                <button type="submit" class="btn btn-success">Success</button>
+            </div>
+
+        </form>
+    </div>
 </div>
