@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using QFeedMill.Models.Dto.Feed;
 using QFeedMill.Models.Dto.FeedCategory;
+using QFeedMill.Models.Entities;
 using QFeedMill.Services;
 
 namespace QFeedMill.Controllers
@@ -8,7 +9,7 @@ namespace QFeedMill.Controllers
 	public class FeedCategoryController : Controller
 	{
 		private readonly IFeedCategoryServices _feedCategoryServices;
-		public FeedCategoryController(IFeedCategoryServices feedCategoryServices)
+        public FeedCategoryController(IFeedCategoryServices feedCategoryServices)
 		{
 			_feedCategoryServices = feedCategoryServices;
 		}
