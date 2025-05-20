@@ -1,18 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
-using QFeedMill.Models;
-using QFeedMill.Models.Entities;
+using QFeedmill.Shared.Models;
 using System.Diagnostics;
 
 namespace QFeedMill.Controllers
 {
-	public class HomeController : Controller
+    public class HomeController : Controller
 	{
 		private readonly ILogger<HomeController> _logger;
 		
 
 		public HomeController(ILogger<HomeController> logger)
 		{
-			_logger = logger;
+			_logger = logger;	
 			
 		}
 
@@ -22,6 +21,11 @@ namespace QFeedMill.Controllers
 		}
 
 		public IActionResult Privacy()
+		{
+			return View();
+		}
+
+        public IActionResult Visual()
 		{
 			return View();
 		}

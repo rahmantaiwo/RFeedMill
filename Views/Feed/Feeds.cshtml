@@ -1,63 +1,56 @@
-﻿@using QFeedMill.Models.Dto.Feed;
+﻿@using QFeedmill.Shared.Models.Dto.Feed;
 @model IEnumerable<FeedDto>;
 
 @{
-	ViewData["Title"] = "Feeds";
-	var i = 0; 
+    ViewData["Title"] = "Feeds";
+    var i = 0;
 }
-<a href="@Url.Action("CreateFeed","Feed")" class="btn btn-secondary">Create New Feed</a>
-<br/>
 
 <div class="col-md-10">
-	<table class="table table-responsive">
-		<thead>
-			<tr>
-				<th scope="col">#</th>
-				<th scope="col">Phase</th>
-				<th>FeedCategoryId</th>
-				<th scope="col">Kilogram</th>
-				<th scope="col">Quantity</th>
-				<th scope="col">Price</th>
-				<th scope="col">Action</th>
-			</tr>
-		</thead>
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Phase</th>
+                <th scope="col">FeedCategoryName</th>
+                <th scope="col">Kilogram</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
 
-		<tbody>
+        <tbody>
 
-			@if (Model.Count() > 0)
-			{
-				@foreach (var item in Model)
-				{
-					i++;
-					<tr>
-						<th scope="row">@i</th>
-						<td>@item.#</td>
-						<td>@item.Phase</td>
-						@* <td>FeedCategory</td> *@
-						<td>@item.Quantity</td>
-						<td>@item.Kilogram</td>
-						<td>@item.Quantity</td>
-						<td>@item.Price</td>
-						<td>
-							<a asp-controller="Phase" asp-action="FeedDetail"
-							   asp-route-id="@item.Id" class="btn btn-secondary">Feed Detail</a>
-						</td>
-						|
-						<td>
-							<a asp-controller="Feed" asp-action="DeleteFeed"
-							   asp-route-id="@item.Id" class="btn btn-secondary">Delete</a>
-						</td>
-					</tr>
-				}
 
-			}
-			else
-			{
-				<tr>
-					No Record Found
-				</tr>
-			}
+@if (Model?.Any() ?? false)
+{
+    var index = 1;
+    foreach (var item in Model)
+    {
+        <tr>
+            <th scope="row">@index</th>
+            <td>@item.Phase</td>
+            <td>@item.FeedCategoryName</td>
+            <td>@item.Kilogram</td>
+            <td>@item.Quantity</td>
+            <td>@item.Price</td>
 
-		</tbody>
-	</table>
-		</div>
+            <td>
+                <a asp-controller="Feed" asp-action="FeedDetail"
+                   asp-route-id="@item.Id" class="btn btn-outline-info">Detail</a>
+                <button asp-controller="Feed" asp-action="DeleteFeed" asp-route-id="@item.Id" class="btn btn-outline-danger">Delete</button>
+            </td>           
+        </tr>
+        index++;
+    }
+}
+else
+{
+    <tr>
+        <td colspan="7" class="text-center">No Record Found</td>
+    </tr>
+}
+
+    </table>
+</div>

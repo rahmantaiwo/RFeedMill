@@ -9,43 +9,103 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = QFeedMill
 build_property.RootNamespace = QFeedMill
-build_property.ProjectDir = C:\Users\HP\source\repos\QuadritechProjects\QFeedMill\
+build_property.ProjectDir = C:\Users\HP\source\repos\QuadritechProjects\RFeedMill\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\HP\source\repos\QuadritechProjects\QFeedMill
+build_property.MSBuildProjectDirectory = C:\Users\HP\source\repos\QuadritechProjects\RFeedMill
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/HP/source/repos/QuadritechProjects/QFeedMill/Views/Feed/Feeds.cshtml]
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/Auth/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/Auth/Users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxVc2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/FeedCategory/CreateFeedCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZENhdGVnb3J5XENyZWF0ZUZlZWRDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/FeedCategory/FeedCategories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZENhdGVnb3J5XEZlZWRDYXRlZ29yaWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/FeedCategory/FeedCategoryDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZENhdGVnb3J5XEZlZWRDYXRlZ29yeURldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/FeedCategory/UpdateFeedCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZENhdGVnb3J5XFVwZGF0ZUZlZWRDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/Feed/CreateFeed.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZFxDcmVhdGVGZWVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/Feed/FeedDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZFxGZWVkRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/Feed/Feeds.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZFxGZWVkcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/HP/source/repos/QuadritechProjects/QFeedMill/Views/Home/Index.cshtml]
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/Feed/UpdateFeed.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZFxVcGRhdGVGZWVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/HP/source/repos/QuadritechProjects/QFeedMill/Views/Home/Privacy.cshtml]
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/HP/source/repos/QuadritechProjects/QFeedMill/Views/Shared/Error.cshtml]
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/Home/Visual.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaXN1YWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/HP/source/repos/QuadritechProjects/QFeedMill/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/HP/source/repos/QuadritechProjects/QFeedMill/Views/_ViewImports.cshtml]
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/User/CreateUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDcmVhdGVVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/User/UpdateUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVcGRhdGVVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/User/UserDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/User/Users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/HP/source/repos/QuadritechProjects/QFeedMill/Views/_ViewStart.cshtml]
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/HP/source/repos/QuadritechProjects/QFeedMill/Views/Shared/_Layout.cshtml]
+[C:/Users/HP/source/repos/QuadritechProjects/RFeedMill/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-a82m1k12jo

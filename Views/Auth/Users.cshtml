@@ -1,0 +1,130 @@
+﻿@model IEnumerable<QFeedmill.Shared.Models.Dto.User.UserDto>
+
+@{
+    ViewData["Title"] = "Users";
+}
+
+<a href="@Url.Action()"></a>
+
+<div class="page-header">
+    <h3 class="page-title">@ViewData["Title"]</h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">@ViewData["Title"]</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@ViewData["SubTitle"]</li>
+        </ol>
+    </nav>
+</div>
+
+<div class="row text-center">
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">@ViewData["Title"]</h4>
+                <a href="@Url.Action("CreateUser")" class="card-description"> Create Buyer </a>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">FirstName</th>
+                                <th scope="col">LastName</th>
+                                <th scope="col">OtherName</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Password</th>
+                                <th scope="col">PhoneNumber</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @if (Model != null)
+                            {
+                                foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.FirstName</td>
+                                        <td>@item.LastName </td>
+                                        <td>@item.UserName</td>
+                                        <td>@item.Email</td>
+                                        <td>@item.Password</td>
+                                        <td>@item.PhoneNumber</td>
+                                        <td>
+                                            <a href="@Url.Action("UserDetail",new {id = item.Id})"
+                                               class="btn btn-gradient-dark btn-icon-text btn-sm">
+                                                View <i class="mdi mdi-file-check btn-icon-append"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="6" class="text-center"> No data found</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-10">
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">FirstName</th>
+                <th scope="col">LastName</th>
+                <th scope="col">OtherName</th>
+                <th scope="col">Email</th>
+                <th scope="col">Password</th>
+                <th scope="col">PhoneNumber</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+
+            @if (Model?.Any() ?? false)
+            {
+                var index = 1;
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <th scope="row">@index</th>
+                        <td>@item.FirstName</td>
+                        <td>@item.LastName</td>
+                        <td>@item.UserName</td>
+                        <td>@item.Email</td>
+                        <td>@item.Password</td>
+                        <td>@item.PhoneNumber</td>
+
+                        <td>
+                            <a asp-controller="User" asp-action="UserDetail"
+                               asp-route-id="@item.Id" class="btn btn-outline-info">Detail</a>
+                        </td>
+
+                        <td>
+                            <button asp-controller="User" asp-action="DeleteUser"
+                                    asp-route-id="@item.Id" class="btn btn-outline-danger">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    index++;
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="7" class="text-center">No Record Found</td>
+                </tr>
+            }
+
+    </table>
+</div>

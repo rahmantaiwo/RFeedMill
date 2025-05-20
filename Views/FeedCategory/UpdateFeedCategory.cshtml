@@ -1,4 +1,4 @@
-﻿@using QFeedMill.Models.Dto.FeedCategory;
+﻿@using QFeedmill.Shared.Models.Dto.FeedCategory;
 @model FeedCategoryDto;
 @{
 	ViewData["Title"] = "Edit FeedCategory";
@@ -16,7 +16,10 @@
 
 				<div>
 					<button asp-controller="FeedCategory" asp-action="UpdateFeedCategory"
-				    type="update" class="btn btn-primary">Update</button>
+							type="update" class="btn btn-outline-success">
+						Update
+					</button>
+				</div>
 				</div>
 		</form>
 	</div>

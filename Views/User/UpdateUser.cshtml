@@ -1,0 +1,37 @@
+﻿@using QFeedmill.Shared.Models.Dto.User;
+@model UserDto;
+@{
+	ViewData["Title"] = "Edit User";
+	var id = Context.GetRouteValue("Id").ToString();
+}
+
+<div class="row">
+	<div class="col-md-8 mx-auto rounded border p-3">
+		<h2 class="text-center">Update User</h2>
+
+		<form asp-controller="User" asp-action="UpdateUser" asp-route-id="@id">
+			
+			<div class="mb-3">
+				<label class="form-label">FirstName</label>
+				<input type="text" class="form-control" name="FirstName" placeholder="Ahmad" value="@Model.FirstName" required>
+			</div>
+
+			<div class="mb-3">
+				<label class="form-label">LastName</label>
+				<input type="text" class="form-control" name="LastName" placeholder="Oyebanji" value="@Model.LastName" required>
+			</div>
+
+			<div class="mb-3">
+				<label class="form-label">OtherName</label>
+				<input type="text" class="form-control" name="OtherName" placeholder="Tunde" value="@Model.UserName" required>
+			</div>
+
+			<div class="row">
+
+				<button asp-controller="User" asp-action="UpdateUser"
+						type="update" class="btn border btn-outline-success">
+					Update
+				</button>
+			</div>
+		</form>
+	</div>

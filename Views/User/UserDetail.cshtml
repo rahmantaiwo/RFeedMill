@@ -1,0 +1,26 @@
+﻿    @using QFeedmill.Shared.Models.Dto.User
+    @model UserDto;
+
+
+@{
+    ViewData["Title"] = "UserDetail";
+}
+
+<div class="col-md- 4">
+    <div class="card">
+        <div class="card-header">
+            @Model.FirstName
+
+            <div class="card-body">
+                <h5 class="card-phase">@Model.FirstName</h5>
+                <p class="card-text">LastName:  @Model.LastName</p>
+                <p class="card-text">OtherName:  @Model.UserName</p>
+                <p class="card-text">Email:      @Model.Email</p>
+                <p class="card-text">Password:      @Model.Password</p>
+                <p class="card-text">PhoneNumber:      @Model.PhoneNumber</p>
+                <a asp-controller="User" asp-action="UpdateUser"
+                   asp-route-id="@Model.Id" class="btn btn-outline-warning">Edit</a>
+            </div>
+        </div>
+    </div>
+</div>

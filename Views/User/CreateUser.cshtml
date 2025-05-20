@@ -1,0 +1,48 @@
+﻿@using QFeedmill.Shared.Models.Dto.User
+@model CreateUserDto
+@{
+    ViewData["Title"] = "Create User";
+}
+
+<div class="row">
+    <div class="col-md-8 mx-auto rounded border p-3">
+        <h2 class="text-center">Create Account</h2>
+
+        <form asp-controller="User" asp-action="CreateUser">
+            <div class="mb-3">
+                <label class="form-label"></label>
+                <input type="text" name="FirstName" value="@Model.FirstName" placeholder="Ahmad" class="form-label"/>
+            </div>
+
+             <div class="mb-3">
+                <label class="form-label"></label>
+                <input type="text" name="LastName" value="@Model.LastName" placeholder="Oyebanji" class="form-label"/>
+            </div>
+
+             <div class="mb-3">
+                <label class="form-label"></label>
+                <input type="text" name="UserName" value="@Model.UserName" placeholder="Tunde" class="form-label"/>
+            </div>
+
+             <div class="mb-3">
+                <label class="form-label"></label>
+                <input type="text" name="Email" value="@Model.Email" placeholder="testing@gmail.com" class="form-label"/>
+            </div>
+
+             <div class="mb-3">
+                <label class="form-label"></label>
+                <input type="text" name="Password" value="@Model.Password" placeholder="ram1234" class="form-label"/>
+            </div>
+
+             <div class="mb-3">
+                <label class="form-label"></label>
+                <input type="text" name="PhonwNumber" value="@Model.PhoneNumber" placeholder="090637892625" class="form-label"/>
+            </div>
+
+            <div class="row">
+            <button type="submit" class="btn btn-success">Create</button>
+            </div>
+
+        </Form>
+    </div>
+</div>

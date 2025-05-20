@@ -1,0 +1,82 @@
+﻿@model QFeedmill.Shared.Models.Dto.User.CreateUserDto
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<section class="vh-100 bg-image"
+         style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                    <div class="card" style="border-radius: 15px;">
+                        <div class="card-body p-5">
+                            <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+                            <!-- Form starts here -->
+                            <form asp-action="Register" method="post">
+
+                                <div data-mdb-input-init class="form-outline mb-4">
+                                    <input asp-for="FirstName" class="form-control form-control-lg" />
+                                    <label class="form-label" for="FirstName">First Name</label>
+                                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                                </div>
+
+                                <div data-mdb-input-init class="form-outline mb-4">
+                                    <input asp-for="LastName" class="form-control form-control-lg" />
+                                    <label class="form-label" for="LastName">Last Name</label>
+                                    <span asp-validation-for="LastName" class="text-danger"></span>
+                                </div>
+
+                                <div data-mdb-input-init class="form-outline mb-4">
+                                    <input asp-for="UserName" class="form-control form-control-lg" />
+                                    <label class="form-label" for="OtherName">User Name</label>
+                                    <span asp-validation-for="UserName" class="text-danger"></span>
+                                </div>
+
+                                <div data-mdb-input-init class="form-outline mb-4">
+                                    <input asp-for="PhoneNumber" class="form-control form-control-lg" />
+                                    <label class="form-label" for="PhoneNumber">Phone Number</label>
+                                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                </div>
+
+                                <div data-mdb-input-init class="form-outline mb-4">
+                                    <input asp-for="Email" type="email" class="form-control form-control-lg" />
+                                    <label class="form-label" for="Email">Your Email</label>
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+
+                                <div data-mdb-input-init class="form-outline mb-4">
+                                    <input asp-for="Password" type="password" class="form-control form-control-lg" />
+                                    <label class="form-label" for="Password">Password</label>
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-check d-flex justify-content-center mb-5">
+                                    <input class="form-check-input me-2" type="checkbox" id="TermsAgreement" />
+                                    <label class="form-check-label" for="TermsAgreement">
+                                        I agree to all statements in <a href="#!" class="text-body"><u>Terms of Service</u></a>
+                                    </label>
+                                </div>
+
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+                                        Register
+                                    </button>
+                                </div>
+
+                                <p class="text-center text-muted mt-5 mb-0">
+                                    Already have an account? <a href="/Auth/Login" class="fw-bold text-body"><u>Login here</u></a>
+                                </p>
+
+                            </form>
+                            <!-- Form ends here -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

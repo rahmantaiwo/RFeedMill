@@ -1,25 +1,27 @@
-﻿@{
+﻿@using QFeedmill.Shared.Models.Dto.Feed;
+@model CreateFeedDto
+@{
     ViewData["Title"] = "Create Feed";
 }
+
+
 <div class="row">
     <div class="col-md-8 mx-auto rounded border p-3">
-        <h2 class="text-center">New Feed</h2>
+        <h2 class="text-center">Create Feed</h2>
 
-        <form asp-controller="Feed" method="post" enctype="multipart/form-data" asp-action="CreateFeed">
+        <form asp-controller="Feed" asp-action="CreateFeed">
 
             <div class="mb-3">
                 <label class="form-label">Phase</label>
                 <select class="form-control" name="Phase">
-                    <option value="text">Starter</option>
-                    <option value="text">Grower</option>
-                    <option value="text">Finisher</option>
+                    <option value="1">Starter</option>
+                    <option value="2">Grower</option>
+                    <option value="3">Finisher</option>
                 </select>
             </div>
             <div>
                 <label class="form-label">FeedCategoryId</label>
-
-
-                <select name="FeedCategory" class="form-select" asp-items="@(ViewData["selectFeedCategories"] as IEnumerable<SelectListItem>)" required>
+                <select name="FeedCategoryId" class="form-select" asp-items="@(ViewData["selectFeedCategories"] as IEnumerable<SelectListItem>)" required>
                     <option value="">Select Feed Category</option>
                 </select>
             </div>
@@ -35,11 +37,11 @@
 
             <div class="mb-3">
                 <label class="form-label">Price</label>
-                <input type="number" class="form-control" name="Price" placeholder="Price" required>
+                <input type="number" class="form-control" name="Price" placeholder="Price"  required>
             </div>
 
             <div class="row">
-                <button type="submit" class="btn btn-success">Success</button>
+                <button type="submit" class="btn btn-success">Create</button>
             </div>
 
         </form>

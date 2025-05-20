@@ -11,11 +11,12 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("acb66905-ead8-4b52-8ad0-7bd489cbb5d1")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("QFeedMill")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b3bd3f4099d7954480ebe5a3ba3836de109a349")]
 [assembly: System.Reflection.AssemblyProductAttribute("QFeedMill")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QFeedMill")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,4 @@
-﻿@using QFeedMill.Models.Dto.Feed;
+﻿@* @using QFeedMill.Models.Dto.Feed;
 
 @model FeedDto;
 
@@ -13,13 +13,39 @@
         </div>
         <div class="card-body">
             <h5 class="card-phase">@Model.Phase</h5>
-            <p class="card-text">FeedCategoryId:  @Model.FeedCategoryId</p>
+            <p class="card-text">FeedCategoryName:  @Model.FeedCategoryName</p>
             <p class="card-text">Kilogram:  @Model.Kilogram</p>
             <p class="card-text">Quantity:      @Model.Quantity</p>
             <p class="card-text">Price:      @Model.Price</p>
             
-            <a asp-controller="Feed" asp-action="UpdateFeed"
+            <a asp-controller="FeedDetail" asp-action="UpdateFeed"
                asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
         </div>
     </div>
 </div>
+ *@
+
+@using QFeedmill.Shared.Models.Dto.Feed
+@model FeedDto;
+
+@{
+    ViewData["Title"] = "FeedDetail";
+}
+
+<div class="col-md- 4">
+    <div class="card">
+        <div class="card-header">
+            @Model.Phase
+           
+                <div class="card-body">
+                    <h5 class="card-phase">@Model.Phase</h5>
+                    <p class="card-text">FeedCategoryName:  @Model.FeedCategoryName</p>
+                    <p class="card-text">Kilogram:  @Model.Kilogram</p>
+                    <p class="card-text">Quantity:      @Model.Quantity</p>
+                    <p class="card-text">Price:      @Model.Price</p>
+                <a asp-controller="Feed" asp-action="UpdateFeed"
+                   asp-route-id="@Model.Id" class="btn btn-outline-warning">Edit</a>
+                </div>
+            </div>
+        </div>
+    </div>

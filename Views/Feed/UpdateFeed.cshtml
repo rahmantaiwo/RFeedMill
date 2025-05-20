@@ -1,52 +1,50 @@
-﻿@using QFeedMill.Models.Dto.Feed;
+﻿@using QFeedmill.Shared.Models.Dto.Feed;
 @model FeedDto;
 @{
 	ViewData["Title"] = "Edit Feed"; 
-	var id = Context?.GetRouteValue("Id").ToString();
+	var id = Context.GetRouteValue("Id").ToString();
 }
 
 <div class="row">
 	<div class="col-md-8 mx-auto rounded border p-3">
 		<h2 class="text-center">Update Feed</h2>
 
-		<form asp-controller="Feed" method="post" enctype="multipart/form-data" asp-action="CreateFeed">
+		<form asp-controller="Feed" asp-action="UpdateFeed" asp-route-id = "@id">
 
 			<div class="mb-3">
 				<label class="form-label">Phase</label>
 				<select class="form-control" name="Phase">
-					<option value="text">Starter</option>
-					<option value="text">Grower</option>
-					<option value="text">Finisher</option>
+					<option value="1">Starter</option>
+					<option value="2">Grower</option>
+					<option value="3">Finisher</option>
 				</select>
 			</div>
 			<div>
-				<label class="form-label">FeedCategoryId</label>
-				@* <select>
-					<option value="Layer">text</option>
-					<option value="Cockerel">text</option>
-					<option value="Broiler">text</option>
-					<option value="Noiler">text</option>
+				<label class="form-label">FeedCategoryName</label>
+				<select name="FeedCategoryId" class="form-select" asp-items="@(ViewData["selectFeedCategories"] as IEnumerable<SelectListItem>)" required>
+					<option value="@Model.FeedCategoryId">Select Feed Category</option>
 				</select>
-			</div> *@
+			</div> 
 			<div class="mb-3">
 				<label class="form-label">Kilogram</label>
-				<input type="text" class="form-control" name="Kilogram" placeholder="Kg" required>
+				<input type="text" class="form-control" name="Kilogram" placeholder="Kg" value="@Model.Kilogram" required>
 			</div>
 
 			<div class="mb-3">
 				<label class="form-label">Quantity</label>
-				<input type="text" class="form-control" name="Quantity" placeholder="Quantity" required>
+				<input type="text" class="form-control" name="Quantity" placeholder="Quantity" value="@Model.Quantity" required>
 			</div>
 
 			<div class="mb-3">
 				<label class="form-label">Price</label>
-				<input type="number" class="form-control" name="Price" placeholder="Price" required>
+				<input type="number" class="form-control" name="Price" placeholder="Price" value="@Model.Price" required>
 			</div>
 
 			<div class="row">
-				<button type="submit" class="btn border btn-success">Success</button>
-			</div>
 
+				<button asp-controller="Feed" asp-action="UpdateFeed"
+						type="update" class="btn border btn-outline-success">Update</button>
+			</div>
 		</form>
 	</div>
 </div>
